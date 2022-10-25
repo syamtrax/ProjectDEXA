@@ -1,0 +1,28 @@
+GET http://localhost:5000/data
+
+###
+GET http://localhost:5000/data/1
+
+###
+POST http://localhost:5000/data
+Content-Type: application/json
+
+{
+    "Provinsi": "Banten",
+    "namaObat" : "Paramex",
+    "katObat" : "Pusing",
+    "hargaObat" : 3000,
+    "score" : 9.0
+}
+
+###
+PATCH http://localhost:5000/data/1
+Content-Type: application/json
+
+{
+    "nama": "Panadol",
+    "gejala" : "pusing"
+}
+
+###
+GET http://localhost:5000/search?Provinsi=Banten
