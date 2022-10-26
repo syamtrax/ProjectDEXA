@@ -9,9 +9,9 @@ Content-Type: application/json
 
 {
     "Provinsi": "Banten",
-    "namaObat" : "Paramex",
+    "namaObat" : "Mbuh",
     "katObat" : "Pusing",
-    "hargaObat" : 3000,
+    "hargaObat" : 5000,
     "score" : 9.0
 }
 
