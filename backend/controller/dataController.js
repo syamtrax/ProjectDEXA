@@ -57,6 +57,7 @@ export const deleteData = async(req, res) => {
 export const getDataByProvince = async(req, res) => {
     try {
         const response = await User.findAll({
+            order:[["score", "DESC"]],
             where:{
                 Provinsi: req.query.Provinsi
             }
@@ -66,3 +67,4 @@ export const getDataByProvince = async(req, res) => {
         console.log(error.message);
     }
 };
+
