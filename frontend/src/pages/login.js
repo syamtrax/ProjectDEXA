@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import backgroundlogin from "../assets/Background-Login.png";
 
 function Login() {
@@ -35,7 +36,7 @@ function Login() {
             </label>
             <input
               className="block w-full p-3 text-gray-500 bg-gray-50 border rounded-md focus:border-gray-50"
-              type="text"
+              type="password"
               placeholder="Kata Sandi"
             />
           </div>
@@ -62,19 +63,15 @@ function Login() {
             </div>
           </div>
           <div className="mt-6">
-            <button className="w-full p-3 tracking-wide text-gray-50 transition-colors duration-200 transform bg-orange-600 rounded-full hover:bg-orange-500">
+            <button className="w-full p-3 tracking-wide text-gray-50 font-bold transition-colors duration-200 transform bg-orange-600 rounded-full hover:bg-orange-500">
               Masuk
             </button>
           </div>
         </form>
         <p className="mt-6 mb-6 text-sm text-center text-gray-50">
-          {" "}
           Belum memiliki Akun?{" "}
-          <a
-            href="#"
-            className="font-semibold text-orange-600 hover:underline text-orange-500"
-          >
-            Daftar Akun
+          <a className="font-semibold text-orange-600 hover:underline text-orange-500">
+            <Link to="/register">Daftar Akun</Link>
           </a>
         </p>
       </div>
