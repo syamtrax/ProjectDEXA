@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import backgroundlogin from "../assets/Background-Login.png";
 
 function Login() {
-
-  
   return (
     <div className="relative w-full h-screen flex items-center bg-cover">
       <img
@@ -66,7 +64,7 @@ function Login() {
           </div>
           <div className="mt-6">
             <button className="w-full p-3 tracking-wide text-gray-50 font-bold transition-colors duration-200 transform bg-orange-600 rounded-full hover:bg-orange-500">
-              Masuk
+              <Link to="/dashboard">Masuk</Link>
             </button>
           </div>
         </form>
