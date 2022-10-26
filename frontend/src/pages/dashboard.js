@@ -25,32 +25,14 @@ function Dashboard() {
         <div className="">
           <Sidebar />
         </div>
-        <div className="flex bg-gray-200 w-full">
-          <table className="flex table-fixed ">
-            <thead>
-              <tr>
-                <th className="w-24 flex justify-start pl-2">Provinsi</th>
-                <th className="w-16 ">Nama Obat</th>
-                <th className="w-16 ">Kategori Obat</th>
-                <th className="w-16 ">Harga Obat</th>
-                <th className="w-16 ">Score</th>
-              </tr>
-            </thead>
-            <tbody>
-              {data.map((dat) => (
-                <tr key={dat.id}>
-                  <td className="w-40 text-center">{dat.Provinsi}</td>
-                  <td className="w-56">{dat.namaObat}</td>
-                  <td className="w-56">{dat.katObat}</td>
-                  <td className="w-56">{dat.hargaObat}</td>
-                  <td className="w-56">{dat.score}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-          <div className="justify-center py-96 align-middle">
-            <div className="w-full bg-gray-500">
+        <div className="flex flex-col bg-gray-200 w-full">
+          <h1 className="font-bold text-5xl text-gray-900 mt-6 ml-6 mb-6">
+            Dashboard
+          </h1>
+          <div className="justify-center align-middle mx-6">
+            <div className="flex w-full bg-gray-50 bourder rounded-xl p-5">
               <select
+                className="w-2/5 p-2"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
               >
@@ -93,30 +75,35 @@ function Dashboard() {
                 onChange={(e) => {
                   setSearch(e.target.value);
                 }}
+                className="w-2/5 p-2 ml-6"
                 type="search"
                 placeholder="Search product"
               />
-              <div>
-                <button onClick={() => getData()}>Search</button>
+              <div className="w-1/5 p-2 tracking-wide text-gray-50 text-center font-bold transition-colors duration-200 transform bg-orange-600 rounded-full hover:bg-orange-500 ml-6">
+                <button className="w-full" onClick={() => getData()}>
+                  Search
+                </button>
               </div>
-              <table className=" table-fixed justify-center py-2 ">
+            </div>
+            <div className="w-full bg-gray-50 p-6 bourder rounded-xl mt-6">
+              <table className="w-full table-fixed justify-center py-2 ">
                 <thead>
                   <tr>
-                    <th className="w-24 ">Provinsi</th>
-                    <th className="w-16 ">Nama Obat</th>
-                    <th className="w-16 ">Kategori Obat</th>
-                    <th className="w-16 ">Harga Obat</th>
-                    <th className="w-16 ">Score</th>
+                    <th className="w-1/5">Provinsi</th>
+                    <th className="w-1/5">Nama Obat</th>
+                    <th className="w-1/5">Kategori Obat</th>
+                    <th className="w-1/5">Harga Obat</th>
+                    <th className="w-1/5">Score</th>
                   </tr>
                 </thead>
                 <tbody>
                   {data.map((dat) => (
                     <tr key={dat.id}>
-                      <td className="w-40 text-center">{dat.Provinsi}</td>
-                      <td className="w-56">{dat.namaObat}</td>
-                      <td className="w-56">{dat.katObat}</td>
-                      <td className="w-56">{dat.hargaObat}</td>
-                      <td className="w-56">{dat.score}</td>
+                      <td className="w-1/5 text-start">{dat.Provinsi}</td>
+                      <td className="w-1/5 text-start">{dat.namaObat}</td>
+                      <td className="w-1/5 text-start">{dat.katObat}</td>
+                      <td className="w-1/5 text-end">{dat.hargaObat}</td>
+                      <td className="w-1/5 text-end">{dat.score}</td>
                     </tr>
                   ))}
                 </tbody>
