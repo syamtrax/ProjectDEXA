@@ -21,7 +21,7 @@ function Dashboard() {
       <div className="absolute">
         <Navbar />
       </div>
-      <div className="flex mt-20 h-full">
+      <div className="flex mt-20 h-screen">
         <div className="">
           <Sidebar />
         </div>
@@ -85,13 +85,8 @@ function Dashboard() {
                 </button>
               </div>
             </div>
-<<<<<<< Updated upstream
             <div className="w-full bg-gray-50 p-6 border rounded-xl mt-6 h-3/4 overflow-y-auto">
               <table className="w-full table-fixed justify-center overflow-y-auto">
-=======
-            <div className="w-full bg-gray-50 p-6 bourder rounded-xl mt-6">
-              <table className="w-full h-auto table-fixed justify-center py-2 overflow-y-auto text-center">
->>>>>>> Stashed changes
                 <thead>
                   <tr className="border-2 border-red-700 bg-red-700 text-gray-50">
                     <th className="w-1/5">Provinsi</th>
@@ -103,21 +98,12 @@ function Dashboard() {
                 </thead>
                 <tbody>
                   {data.map((dat) => (
-<<<<<<< Updated upstream
-                    <tr key={dat.id} className="py-8">
+                    <tr key={dat.id} className="py-8 border border-gray-300">
                       <td className="w-1/5 text-center">{dat.Provinsi}</td>
                       <td className="w-1/5 text-center">{dat.namaObat}</td>
                       <td className="w-1/5 text-center">{dat.katObat}</td>
                       <td className="w-1/5 text-center">{dat.hargaObat}</td>
                       <td className="w-1/5 text-center">{dat.score}</td>
-=======
-                    <tr key={dat.id} className="border-2 border-gray-300">
-                      <td className="w-1/5">{dat.Provinsi}</td>
-                      <td className="w-1/5">{dat.namaObat}</td>
-                      <td className="w-1/5">{dat.katObat}</td>
-                      <td className="w-1/5">{dat.hargaObat}</td>
-                      <td className="w-1/5">{dat.score}</td>
->>>>>>> Stashed changes
                     </tr>
                   ))}
                 </tbody>
