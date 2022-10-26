@@ -11,9 +11,9 @@ function Navbar() {
           <div className="flex item-center text-3xl italic font-bold w-64 text-center px-12 py-5 bg-red-800 text-gray-50">
             dexa group
           </div>
-          <div className="w-20 h-20 items-center text-gray-50 text-center text-2xl px-7 py-7 hover:bg-red-800">
+          {/* <div className="w-20 h-20 items-center text-gray-50 text-center text-2xl px-7 py-7 hover:bg-red-800">
             <MdMenu />
-          </div>
+          </div> */}
         </div>
         <div className="flex">
           <div className="flex items-center mr-6">
