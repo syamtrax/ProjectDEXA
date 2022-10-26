@@ -17,7 +17,7 @@ function Dashboard() {
   };
 
   return (
-    <div className="flex flex-col w-full h-screen">
+    <div className="flex flex-col w-full max-h-screen">
       <div className="absolute">
         <Navbar />
       </div>
@@ -85,8 +85,8 @@ function Dashboard() {
                 </button>
               </div>
             </div>
-            <div className="w-full bg-gray-50 p-6 bourder rounded-xl mt-6">
-              <table className="w-full table-fixed justify-center py-2 ">
+            <div className="w-full bg-gray-50 p-6 border rounded-xl mt-6 h-3/4 overflow-y-auto">
+              <table className="w-full table-fixed justify-center overflow-y-auto">
                 <thead>
                   <tr>
                     <th className="w-1/5">Provinsi</th>
@@ -98,12 +98,12 @@ function Dashboard() {
                 </thead>
                 <tbody>
                   {data.map((dat) => (
-                    <tr key={dat.id}>
-                      <td className="w-1/5 text-start">{dat.Provinsi}</td>
-                      <td className="w-1/5 text-start">{dat.namaObat}</td>
-                      <td className="w-1/5 text-start">{dat.katObat}</td>
-                      <td className="w-1/5 text-end">{dat.hargaObat}</td>
-                      <td className="w-1/5 text-end">{dat.score}</td>
+                    <tr key={dat.id} className="py-8">
+                      <td className="w-1/5 text-center">{dat.Provinsi}</td>
+                      <td className="w-1/5 text-center">{dat.namaObat}</td>
+                      <td className="w-1/5 text-center">{dat.katObat}</td>
+                      <td className="w-1/5 text-center">{dat.hargaObat}</td>
+                      <td className="w-1/5 text-center">{dat.score}</td>
                     </tr>
                   ))}
                 </tbody>

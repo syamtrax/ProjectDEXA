@@ -7,13 +7,13 @@ GET http://localhost:5000/data/1
 POST http://localhost:5000/data
 Content-Type: application/json
 
-{
-    "Provinsi": "Banten",
-    "namaObat" : "Mbuh",
-    "katObat" : "Pusing",
-    "hargaObat" : 5000,
-    "score" : 9.0
-}
+    {
+        "Provinsi": "Banten",
+        "namaObat" : "Mbuh",
+        "katObat" : "Pusing",
+        "hargaObat" : 5000,
+        "score" : 9.0
+    }
 
 ###
 PATCH http://localhost:5000/data/1
