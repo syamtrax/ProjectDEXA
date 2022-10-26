@@ -63,10 +63,10 @@ function Login() {
             </div>
           </div>
           <div className="mt-6">
-          <Link to="/dashboard">
-            <button className="w-full p-3 tracking-wide text-gray-50 font-bold transition-colors duration-200 transform bg-orange-600 rounded-full hover:bg-orange-500">
-              Masuk
-            </button>
+            <Link to="/dashboard">
+              <button className="w-full p-3 tracking-wide text-gray-50 font-bold transition-colors duration-200 transform bg-orange-600 rounded-full hover:bg-orange-500">
+                Masuk
+              </button>
             </Link>
           </div>
         </form>
