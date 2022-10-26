@@ -7,6 +7,7 @@ GET http://localhost:5000/data/1
 POST http://localhost:5000/data
 Content-Type: application/json
 
+<<<<<<< Updated upstream
     {
         "Provinsi": "Banten",
         "namaObat" : "Mbuh",
@@ -14,6 +15,15 @@ Content-Type: application/json
         "hargaObat" : 5000,
         "score" : 9.0
     }
+=======
+{
+    "Provinsi": "Aceh",
+    "namaObat" : "Panadol Flu",
+    "katObat" : "Pusing",
+    "hargaObat" : 5000,
+    "score" : 9.0
+}
+>>>>>>> Stashed changes
 
 ###
 PATCH http://localhost:5000/data/1

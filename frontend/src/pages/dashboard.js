@@ -32,7 +32,7 @@ function Dashboard() {
           <div className="justify-center align-middle mx-6">
             <div className="flex w-full bg-gray-50 bourder rounded-xl p-5">
               <select
-                className="w-2/5 p-2"
+                className="w-2/5 p-2 border-b-2"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
               >
@@ -75,9 +75,9 @@ function Dashboard() {
                 onChange={(e) => {
                   setSearch(e.target.value);
                 }}
-                className="w-2/5 p-2 ml-6"
+                className="w-2/5 p-2 ml-6 border-b-2"
                 type="search"
-                placeholder="Search product"
+                placeholder="Search Product"
               />
               <div className="w-1/5 p-2 tracking-wide text-gray-50 text-center font-bold transition-colors duration-200 transform bg-orange-600 rounded-full hover:bg-orange-500 ml-6">
                 <button className="w-full" onClick={() => getData()}>
@@ -85,10 +85,15 @@ function Dashboard() {
                 </button>
               </div>
             </div>
+<<<<<<< Updated upstream
             <div className="w-full bg-gray-50 p-6 border rounded-xl mt-6 h-3/4 overflow-y-auto">
               <table className="w-full table-fixed justify-center overflow-y-auto">
+=======
+            <div className="w-full bg-gray-50 p-6 bourder rounded-xl mt-6">
+              <table className="w-full h-auto table-fixed justify-center py-2 overflow-y-auto text-center">
+>>>>>>> Stashed changes
                 <thead>
-                  <tr>
+                  <tr className="border-2 border-red-700 bg-red-700 text-gray-50">
                     <th className="w-1/5">Provinsi</th>
                     <th className="w-1/5">Nama Obat</th>
                     <th className="w-1/5">Kategori Obat</th>
@@ -98,12 +103,21 @@ function Dashboard() {
                 </thead>
                 <tbody>
                   {data.map((dat) => (
+<<<<<<< Updated upstream
                     <tr key={dat.id} className="py-8">
                       <td className="w-1/5 text-center">{dat.Provinsi}</td>
                       <td className="w-1/5 text-center">{dat.namaObat}</td>
                       <td className="w-1/5 text-center">{dat.katObat}</td>
                       <td className="w-1/5 text-center">{dat.hargaObat}</td>
                       <td className="w-1/5 text-center">{dat.score}</td>
+=======
+                    <tr key={dat.id} className="border-2 border-gray-300">
+                      <td className="w-1/5">{dat.Provinsi}</td>
+                      <td className="w-1/5">{dat.namaObat}</td>
+                      <td className="w-1/5">{dat.katObat}</td>
+                      <td className="w-1/5">{dat.hargaObat}</td>
+                      <td className="w-1/5">{dat.score}</td>
+>>>>>>> Stashed changes
                     </tr>
                   ))}
                 </tbody>
