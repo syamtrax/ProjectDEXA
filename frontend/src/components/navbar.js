@@ -21,7 +21,7 @@ function Navbar() {
               <RiAccountCircleLine />
             </div>
             <div className="text-gray-50 text-center text-lg font-medium ml-1">
-              Nama Pengguna
+              Admin
             </div>
           </div>
           <div className="w-20 h-20 px-5 py-4 hover:bg-red-800">

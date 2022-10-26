@@ -4,80 +4,80 @@ import axios from "axios";
 import backgroundRegist from "../assets/Background-Register.png";
 
 function Regist() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [number, setNoTelepon] = useState("");
-  const [checkedUsername, setCheckedUsername] = useState("");
-  const [checkedPassword, setCheckedPassword] = useState("");
-  const [checkedNumber, setCheckedNoTelepon] = useState("");
-  const [second, setSeconds] = useState(0);
-  const [disableButton, setDisable] = useState(false);
-  const navigate = useNavigate();
+  // const [username, setUsername] = useState("");
+  // const [password, setPassword] = useState("");
+  // const [number, setNoTelepon] = useState("");
+  // const [checkedUsername, setCheckedUsername] = useState("");
+  // const [checkedPassword, setCheckedPassword] = useState("");
+  // const [checkedNumber, setCheckedNoTelepon] = useState("");
+  // const [second, setSeconds] = useState(0);
+  // const [disableButton, setDisable] = useState(false);
+  // const navigate = useNavigate();
 
-  const validateUsername = (username) => {
-    const re =
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (re.test(username)) {
-      setCheckedUsername("");
-      return true;
-    } else {
-      setCheckedUsername(
-        "Nama Pengguna yang Anda masukkan tidak valid atau sudah terdaftar."
-      );
-      return false;
-    }
-  };
+  // const validateUsername = (username) => {
+  //   const re =
+  //     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  //   if (re.test(username)) {
+  //     setCheckedUsername("");
+  //     return true;
+  //   } else {
+  //     setCheckedUsername(
+  //       "Nama Pengguna yang Anda masukkan tidak valid atau sudah terdaftar."
+  //     );
+  //     return false;
+  //   }
+  // };
 
-  const validatePassword = (password) => {
-    if (password.lenght < 8) {
-      setCheckedPassword(
-        "Kata Sandi yang Anda masukkan kurang dari 8 karakter."
-      );
-      return false;
-    } else {
-      setCheckedPassword("");
-      return true;
-    }
-  };
+  // const validatePassword = (password) => {
+  //   if (password.lenght < 8) {
+  //     setCheckedPassword(
+  //       "Kata Sandi yang Anda masukkan kurang dari 8 karakter."
+  //     );
+  //     return false;
+  //   } else {
+  //     setCheckedPassword("");
+  //     return true;
+  //   }
+  // };
 
-  const validateNoTelepon = (number) => {
-    if (number.lenght < 11) {
-      setCheckedNoTelepon("Nomor Telepon yang Anda masukkan tidak valid");
-      return false;
-    } else {
-      setCheckedNoTelepon("");
-      return true;
-    }
-  };
+  // const validateNoTelepon = (number) => {
+  //   if (number.lenght < 11) {
+  //     setCheckedNoTelepon("Nomor Telepon yang Anda masukkan tidak valid");
+  //     return false;
+  //   } else {
+  //     setCheckedNoTelepon("");
+  //     return true;
+  //   }
+  // };
 
-  const handleRegister = async (e) => {
-    const usernameChecked = validateUsername(username);
-    const passwordChecked = validatePassword(password);
-    const numberChecked = validateNoTelepon(number);
+  // const handleRegister = async (e) => {
+  //   const usernameChecked = validateUsername(username);
+  //   const passwordChecked = validatePassword(password);
+  //   const numberChecked = validateNoTelepon(number);
 
-    if (usernameChecked && passwordChecked && numberChecked) {
-      e.preventDefault();
-      try {
-        await axios.post("http://localhost:5000/user", {
-          namapengguna: username,
-          katasandi: password,
-          nomortelepon: number,
-        });
-        navigate("/");
-      } catch (error) {
-        console.log(error);
-      }
-    }
-  };
+  //   if (usernameChecked && passwordChecked && numberChecked) {
+  //     e.preventDefault();
+  //     try {
+  //       await axios.post("http://localhost:5000/user", {
+  //         namapengguna: username,
+  //         katasandi: password,
+  //         nomortelepon: number,
+  //       });
+  //       navigate("/");
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   }
+  // };
 
-  useEffect(() => {
-    if (second > 0) {
-      setDisable(true);
-      setTimeout(() => setSeconds(second - 1), 1000);
-    } else {
-      setDisable(false);
-    }
-  }, [second]);
+  // useEffect(() => {
+  //   if (second > 0) {
+  //     setDisable(true);
+  //     setTimeout(() => setSeconds(second - 1), 1000);
+  //   } else {
+  //     setDisable(false);
+  //   }
+  // }, [second]);
 
   return (
     <div className="grid grid-cols-2">
@@ -96,7 +96,7 @@ function Regist() {
               <Link to="/">Masuk</Link>
             </a>
           </p>
-          <form className="mt-6 mb-6" onSubmit={handleRegister}>
+          <form className="mt-6 mb-6">
             <div>
               <label
                 className="block text-base font-medium text-gray-50"
@@ -109,13 +109,13 @@ function Regist() {
                 type="text"
                 name="username"
                 className="block w-full p-3 text-gray-500 bg-gray-50 border rounded-md focus:border-gray-50"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                // value={username}
+                // onChange={(e) => setUsername(e.target.value)}
                 placeholder="Masukkan Nama Pengguna"
               />
-              {checkedUsername.length > 0 && (
+              {/* {checkedUsername.length > 0 && (
                 <p className="text-red-500">{checkedUsername}</p>
-              )}
+              )} */}
             </div>
             <div>
               <label
@@ -129,13 +129,13 @@ function Regist() {
                 type="password"
                 name="password"
                 className="block w-full p-3 text-gray-500 bg-gray-50 border rounded-md focus:border-gray-50"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                // value={password}
+                // onChange={(e) => setPassword(e.target.value)}
                 placeholder="Masukkan Kata Sandi"
               />
-              {checkedPassword.length > 0 && (
+              {/* {checkedPassword.length > 0 && (
                 <p className="text-red-500">{checkedPassword}</p>
-              )}
+              )} */}
             </div>
             <div>
               <label
@@ -149,17 +149,17 @@ function Regist() {
                 type="number"
                 name="number"
                 className="block w-full p-3 text-gray-500 bg-gray-50 border rounded-md focus:border-gray-50"
-                value={number}
-                onChange={(e) => setNoTelepon(e.target.value)}
+                // value={number}
+                // onChange={(e) => setNoTelepon(e.target.value)}
                 placeholder="Masukkan No.Telepon"
               />
-              {checkedNumber.length > 0 && (
+              {/* {checkedNumber.length > 0 && (
                 <p className="text-red-500">{checkedNumber}</p>
-              )}
+              )} */}
             </div>
             <div className="mt-6">
               <button className="w-full p-3 tracking-wide text-gray-50 font-bold transition-colors duration-200 transform bg-orange-600 rounded-full hover:bg-orange-500">
-                Daftar
+                <Link to="/">Daftar</Link>
               </button>
             </div>
           </form>
