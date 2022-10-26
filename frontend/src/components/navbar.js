@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { MdMenu, MdExitToApp } from "react-icons/md";
 import { RiAccountCircleLine } from "react-icons/ri";
 
@@ -23,13 +24,17 @@ function Navbar() {
               Nama Pengguna
             </div>
           </div>
-          <div className="flex flex-col w-20 h-20 px-4 py-4 items-center hover:bg-red-800">
-            <div className="text-gray-50 text-center text-2xl">
-              <MdExitToApp />
-            </div>
-            <div className="text-gray-50 text-center text-base font-medium">
-              Keluar
-            </div>
+          <div className="w-20 h-20 px-5 py-4 hover:bg-red-800">
+            <button>
+              <Link className="flex flex-col items-center" to="/">
+                <div className="text-gray-50 text-center text-2xl">
+                  <MdExitToApp />
+                </div>
+                <div className="text-gray-50 text-center text-base font-medium">
+                  Keluar
+                </div>
+              </Link>
+            </button>
           </div>
         </div>
       </div>
