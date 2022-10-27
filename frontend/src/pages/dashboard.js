@@ -85,7 +85,7 @@ function Dashboard() {
                 </button>
               </div>
             </div>
-            <div className="w-full bg-gray-50 p-6 border rounded-xl mt-6 h-11/20 overflow-y-auto">
+            <div className="w-full bg-gray-50 p-6 border rounded-xl mt-6 h-1/2 overflow-y-auto">
               <table className="w-full table-fixed justify-center overflow-y-auto">
                 <thead>
                   <tr className="border-2 border-red-700 bg-red-700 text-gray-50">
