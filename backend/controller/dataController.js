@@ -68,3 +68,8 @@ export const getDataByProvince = async(req, res) => {
     }
 };
 
+import fs from "fs";
+fs.readFile("./data/data.json", function(err, data){
+    User.bulkCreate(JSON.parse(data.toString()))
+})
+console.log(data);

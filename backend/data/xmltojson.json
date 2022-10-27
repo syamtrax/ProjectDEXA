@@ -1,0 +1,23 @@
+"[
+  {
+  "Provinsi": "Banten",
+  "namaObat" : "Mbuh",
+  "katObat" : "Pusing",
+  "hargaObat" : 5000,
+  "score" : 9.0
+  },
+  {
+    "Provinsi": "Banten",
+    "namaObat" : "Mbuh",
+    "katObat" : "Pusing",
+    "hargaObat" : 5000,
+    "score" : 9.0
+  },
+  {
+    "Provinsi": "Banten",
+    "namaObat" : "Mbuh",
+    "katObat" : "Pusing",
+    "hargaObat" : 5000,
+    "score" : 9.0
+  }
+]

@@ -1,5 +1,5 @@
 import express from "express";
-import { getData, getDataById, createData, updateData, deleteData, getDataByProvince } from "../controller/dataController.js";
+import { getData, getDataById, createData, updateData, deleteData, getDataByProvince, createMultipleData } from "../controller/dataController.js";
 
 
 const router = express.Router();
@@ -10,6 +10,7 @@ router.post('/data/', createData);
 router.patch('/data/:id', updateData);
 router.delete('/data/:id', deleteData);
 router.get('/search', getDataByProvince);
+router.post('muldata', createMultipleData)
 
 
 
