@@ -8,9 +8,9 @@ router.get('/data', getData);
 router.get('/data/:id', getDataById);
 router.post('/data/', createData);
 router.patch('/data/:id', updateData);
-router.delete('/data/:id', deleteData);
+router.delete('/data', deleteData);
 router.get('/search', getDataByProvince);
-router.post('muldata', createMultipleData)
+router.post('/muldata', createMultipleData);
 
 
 

@@ -44,9 +44,8 @@ export const updateData = async(req, res) => {
 export const deleteData = async(req, res) => {
     try {
         await User.destroy({
-            where:{
-                id: req.params.id
-            }
+            where: {},
+            truncate: true
         })
         res.status(200).json({msg: "Data Deleted"});
     } catch (error) {
@@ -68,8 +67,21 @@ export const getDataByProvince = async(req, res) => {
     }
 };
 
+
+export const createMultipleData = async(req, res) => {
+    try {
+        fs.readFile("./data/data.json", function(err, data){
+            User.bulkCreate(JSON.parse(data.toString()))}
+        )
+        res.status(201).json({msg: "Data Created"});
+    } catch (error) {
+        console.log(error.message);
+    }
+};
+
+
+
 import fs from "fs";
-fs.readFile("./data/data.json", function(err, data){
+/*fs.readFile("./data/data.json", function(err, data){
     User.bulkCreate(JSON.parse(data.toString()))
-})
-console.log(data);
+})*/
