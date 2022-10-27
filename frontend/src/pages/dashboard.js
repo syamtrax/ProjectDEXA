@@ -40,7 +40,7 @@ function Dashboard() {
                 <option value="Aceh">Aceh</option>
                 <option value="Sumatera Utara">Sumatera Utara</option>
                 <option value="Sumatera Selatan">Sumatera Selatan</option>
-                <option value="Sumatera Barat">Sumatera Selatan</option>
+                <option value="Sumatera Barat">Sumatera Barat</option>
                 <option value="Riau">Riau</option>
                 <option value="Kepulauan Riau">Kepulauan Riau</option>
                 <option value="Jambi">Jambi</option>
@@ -78,7 +78,7 @@ function Dashboard() {
                 }}
                 className="w-2/5 p-2 ml-6 border-b-2"
                 type="search"
-                placeholder="Search Province"
+                placeholder="Cari Provinsi"
               />
               <div className="w-1/5 p-2 tracking-wide text-gray-50 text-center font-bold transition-colors duration-200 transform bg-orange-600 rounded-full hover:bg-orange-500 ml-6">
                 <button className="w-full" onClick={() => getData()}>
@@ -86,7 +86,7 @@ function Dashboard() {
                 </button>
               </div>
             </div>
-            <div className="w-full bg-gray-50 p-6 border rounded-xl mt-6 h-5/6 overflow-y-auto">
+            <div className="w-full bg-gray-50 p-6 border rounded-xl mt-6 h-1/6 overflow-y-auto">
               <table className="w-full table-fixed justify-center overflow-y-auto">
                 <thead className="">
                   <tr className="border-2 border-red-700 bg-red-700 text-gray-50 ">

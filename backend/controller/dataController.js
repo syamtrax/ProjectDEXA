@@ -61,7 +61,7 @@ export const getDataByProvince = async(req, res) => {
             where:{
                 Provinsi: req.query.Provinsi
             },
-            limit : 20
+            // limit : 20
         });
         res.status(200).json(response);
     } catch (error) {
