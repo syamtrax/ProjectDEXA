@@ -1,4 +1,5 @@
 import User from "../models/dbModel.js";
+import fs from "fs";
 
 export const getData = async(req, res) => {
     try {
@@ -59,7 +60,8 @@ export const getDataByProvince = async(req, res) => {
             order:[["score", "DESC"]],
             where:{
                 Provinsi: req.query.Provinsi
-            }
+            },
+            limit : 20
         });
         res.status(200).json(response);
     } catch (error) {
@@ -81,7 +83,5 @@ export const createMultipleData = async(req, res) => {
 
 
 
-import fs from "fs";
-/*fs.readFile("./data/data.json", function(err, data){
-    User.bulkCreate(JSON.parse(data.toString()))
-})*/
+
+

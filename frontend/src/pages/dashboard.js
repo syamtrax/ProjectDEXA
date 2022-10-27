@@ -36,6 +36,7 @@ function Dashboard() {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
               >
+                <option value="Kosong">none</option>
                 <option value="Aceh">Aceh</option>
                 <option value="Sumatera Utara">Sumatera Utara</option>
                 <option value="Sumatera Selatan">Sumatera Selatan</option>
@@ -77,7 +78,7 @@ function Dashboard() {
                 }}
                 className="w-2/5 p-2 ml-6 border-b-2"
                 type="search"
-                placeholder="Search Product"
+                placeholder="Search Province"
               />
               <div className="w-1/5 p-2 tracking-wide text-gray-50 text-center font-bold transition-colors duration-200 transform bg-orange-600 rounded-full hover:bg-orange-500 ml-6">
                 <button className="w-full" onClick={() => getData()}>
@@ -85,11 +86,11 @@ function Dashboard() {
                 </button>
               </div>
             </div>
-            <div className="w-full bg-gray-50 p-6 border rounded-xl mt-6 h-1/2 overflow-y-auto">
+            <div className="w-full bg-gray-50 p-6 border rounded-xl mt-6 h-5/6 overflow-y-auto">
               <table className="w-full table-fixed justify-center overflow-y-auto">
-                <thead>
-                  <tr className="border-2 border-red-700 bg-red-700 text-gray-50">
-                    <th className="w-1/5">Provinsi</th>
+                <thead className="">
+                  <tr className="border-2 border-red-700 bg-red-700 text-gray-50 ">
+                    <th className="w-1/5 py-2">Provinsi</th>
                     <th className="w-1/5">Nama Obat</th>
                     <th className="w-1/5">Kategori Obat</th>
                     <th className="w-1/5">Harga Obat</th>
