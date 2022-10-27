@@ -18,14 +18,14 @@ function Dashboard() {
 
   return (
     <div className="flex flex-col w-full max-h-screen">
-      <div className="absolute">
+      <div className="fixed">
         <Navbar />
       </div>
-      <div className="flex mt-20 h-screen">
-        <div className="">
+      <div className="fixed flex mt-20 h-screen">
+        <div className="relative fixed">
           <Sidebar />
         </div>
-        <div className="flex flex-col bg-gray-200 w-full">
+        <div className="relative flex flex-col bg-gray-200 w-full">
           <h1 className="font-bold text-5xl text-gray-900 mt-6 ml-6 mb-6">
             Dashboard
           </h1>
@@ -85,7 +85,7 @@ function Dashboard() {
                 </button>
               </div>
             </div>
-            <div className="w-full bg-gray-50 p-6 border rounded-xl mt-6 h-3/4 overflow-y-auto">
+            <div className="w-full bg-gray-50 p-6 border rounded-xl mt-6 h-73/100 overflow-y-auto">
               <table className="w-full table-fixed justify-center overflow-y-auto">
                 <thead>
                   <tr className="border-2 border-red-700 bg-red-700 text-gray-50">
