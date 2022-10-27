@@ -98,7 +98,7 @@ function Dashboard() {
                 </thead>
                 <tbody>
                   {data.map((dat) => (
-                    <tr key={dat.id} className="py-8">
+                    <tr key={dat.id} className="py-8 border-2 border-gray-300">
                       <td className="w-1/5 text-center">{dat.Provinsi}</td>
                       <td className="w-1/5 text-center">{dat.namaObat}</td>
                       <td className="w-1/5 text-center">{dat.katObat}</td>
