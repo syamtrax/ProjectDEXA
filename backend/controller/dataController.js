@@ -72,7 +72,7 @@ export const getDataByProvince = async(req, res) => {
 
 export const createMultipleData = async(req, res) => {
     try {
-        fs.readFile("./data/data.json", function(err, data){
+        fs.readFile("./data/datafix.json", function(err, data){
             User.bulkCreate(JSON.parse(data.toString()))}
         )
         res.status(201).json({msg: "Data Created"});
